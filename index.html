@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="5;url=https://sites.google.com/view/schoolutilities/">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        p {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>Redirect Example</title>
+  <script>
+    window.onload = function() {
+      if (window.location.href != "https://sites.google.com/view/schoolutilities/") {
+        var redirectLink = document.createElement("a");
+        redirectLink.href = "https://www.example.com";
+        redirectLink.textContent = "If you are not redirected automatically, please click here.";
+        redirectLink.style.fontWeight = "bold";
+
+        document.body.appendChild(redirectLink);
+      }
+    };
+  </script>
 </head>
 <body>
-    <p>If you are not redirected, <a href="https://sites.google.com/view/schoolutilities/">click here</a>.</p>
+  <h1>This page will redirect you to another website in 0 seconds.</h1>
 </body>
 </html>
